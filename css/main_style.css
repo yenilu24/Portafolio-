@@ -43,6 +43,16 @@ header .hmb-button div {
     height: 3px;
     background-color: #fff;
     border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+header .hmb-button.open div:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+header .hmb-button.open div:nth-child(2) {
+    opacity: 0;
+}
+header .hmb-button.open div:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
 }
 
 header .brand-section {
@@ -53,10 +63,10 @@ header .brand-section {
 }
 header .brand-section img {
     width: 170px;
-    height: 200px;
+    height: 170px;
     object-fit: cover;
     object-position: center 15%;
-    border-radius: 10px;
+    border-radius: 50%;
     border: 4px solid #fff;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
@@ -170,6 +180,22 @@ section h2 {
     background-color: #6b6b6b;
 }
 
+/* Educación */
+.education-item + .education-item {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+.education-item h3 {
+    margin: 0 0 0.3rem;
+    color: #333;
+}
+.education-meta {
+    color: #6b6b6b;
+    font-size: 0.9rem;
+    margin: 0 0 0.8rem;
+}
+
 /* Proyectos */
 .projects {
     display: flex;
@@ -191,6 +217,20 @@ section h2 {
 .project-card:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
     transform: translateY(-4px);
+}
+.project-card--pending {
+    background-color: transparent;
+    border: 1px dashed #ccc;
+    box-shadow: none;
+}
+.project-card--pending:hover {
+    box-shadow: none;
+    transform: none;
+    border-color: #999;
+}
+.project-card--pending p {
+    color: #999;
+    font-style: italic;
 }
 .project-card h3 {
     margin-top: 0;
@@ -298,7 +338,7 @@ footer p {
 @media (max-width: 480px) {
     header .brand-section img {
         width: 130px;
-        height: 150px;
+        height: 130px;
     }
     header .brand-section h1 {
         font-size: 1.2rem;
@@ -311,4 +351,12 @@ footer p {
 
 .hidden {
     display: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #4d4d4d;
+    outline-offset: 2px;
 }

@@ -3,7 +3,17 @@ document.addEventListener("DOMContentLoaded", function () {
     var nav = document.getElementById("mainNav");
 
     hmbButton.addEventListener("click", function () {
-        nav.classList.toggle("hidden");
+        var isOpen = nav.classList.toggle("hidden") === false;
+        hmbButton.classList.toggle("open", isOpen);
+        hmbButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            nav.classList.add("hidden");
+            hmbButton.classList.remove("open");
+            hmbButton.setAttribute("aria-expanded", "false");
+        });
     });
 
     var isEmptyRegex = /^\s*$/;
