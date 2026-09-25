@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yenifer Melgar - Portafolio</title>
+<link rel="stylesheet" href="main_style.css">
+</head>
+<body>
+
+<header>
+    <div class="brand-section">
+        <img src="foto_perfil.png" alt="Foto de perfil de Yenifer Melgar">
+        <h1>
+            Yenifer Melgar
+            <span>Estudiante de Ingeniería en Ciencias de la Computación</span>
+        </h1>
+    </div>
+    <div class="hmb-button" id="hmbButton">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav class="hidden" id="mainNav">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>Soy Yenifer Liliana Melgar Luque, estudiante de 3er año de Ingeniería en Ciencias de la Computación.</p>
+        <p>Estoy dando mis primeros pasos en el desarrollo web, aprendiendo a construir páginas con HTML, CSS y JavaScript.</p>
+        <p>Antes de esto he trabajado principalmente con C++, usando entornos como NetBeans, Visual Studio y Visual Studio Code.</p>
+        <ul class="skills">
+            <li>C++</li>
+            <li>NetBeans</li>
+            <li>Visual Studio</li>
+            <li>Visual Studio Code</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Portafolio</h3>
+                <p>Este mismo portafolio, hecho con HTML, CSS y JavaScript.</p>
+                <a href="https://github.com/yenilu24/Portafolio-" target="_blank" rel="noopener">Repositorio</a>
+                <a href="https://yenilu24.github.io/Portafolio-/" target="_blank" rel="noopener">Demo</a>
+            </div>
+            <div class="project-card">
+                <h3>Proyecto 2</h3>
+                <p>Pendiente de agregar.</p>
+            </div>
+            <div class="project-card">
+                <h3>Proyecto 3</h3>
+                <p>Pendiente de agregar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="contactForm" novalidate>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre">
+            <div class="error" id="errorNombre"></div>
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email">
+            <div class="error" id="errorEmail"></div>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje"></textarea>
+            <div class="error" id="errorMensaje"></div>
+
+            <button type="submit">Enviar</button>
+            <div id="formMensaje"></div>
+        </form>
+
+        <div class="contact-links">
+            <a href="mailto:tu-correo@example.com">tu-correo@example.com</a>
+            <a href="https://github.com/yenilu24" target="_blank" rel="noopener">github.com/yenilu24</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p style="text-align:center;">Copyright 2026 &copy; Yenifer Melgar</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
